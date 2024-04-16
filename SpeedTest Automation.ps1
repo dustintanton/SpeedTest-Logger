@@ -1,5 +1,5 @@
 # Define the output file
-$outputFile = "C:\Users\Presto IT\Downloads\ookla-speedtest-1.2.0-win64\speedtest_log.csv"
+$outputFile = "C:\path to folder\ookla-speedtest-1.2.0-win64\speedtest_log.csv"
 
 # Getting Timestamp variable
 $currentTimestamp = Get-Date -Format "MM-dd-yyyy HH:mm:ss"
@@ -12,7 +12,7 @@ if (-not (Test-Path $outputFile)) {
 # Function to run speedtest and parse results
 function Perform-SpeedTest {
     # Specify the full path to the speedtest executable
-    $speedtestExecutable = "C:\Users\Presto IT\Downloads\ookla-speedtest-1.2.0-win64\speedtest.exe"
+    $speedtestExecutable = "C:\path to folder\ookla-speedtest-1.2.0-win64\speedtest.exe"
     $currentTimestamp = Get-Date -Format "MM-dd-yyyy HH:mm:ss"
 
     # Using the call operator (&) to execute the speedtest with full path
