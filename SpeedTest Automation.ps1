@@ -2,7 +2,7 @@
 $outputFile = "C:\Users\Presto IT\Downloads\ookla-speedtest-1.2.0-win64\speedtest_log.csv"
 
 # Getting Timestamp variable
-$currentTimestamp = Get-Date -FOrmat "MM-dd-yyyy HH:mm:ss"
+$currentTimestamp = Get-Date -Format "MM-dd-yyyy HH:mm:ss"
 
 # Check if the output file exists, and if not, create it with headers
 if (-not (Test-Path $outputFile)) {
@@ -13,7 +13,8 @@ if (-not (Test-Path $outputFile)) {
 function Perform-SpeedTest {
     # Specify the full path to the speedtest executable
     $speedtestExecutable = "C:\Users\Presto IT\Downloads\ookla-speedtest-1.2.0-win64\speedtest.exe"
-    
+    $currentTimestamp = Get-Date -Format "MM-dd-yyyy HH:mm:ss"
+
     # Using the call operator (&) to execute the speedtest with full path
     $result = & $speedtestExecutable -f csv
     $result = $currentTimestamp + "," + $result.Trim()
