@@ -4,20 +4,21 @@ This PowerShell script performs periodic Ookla Speedtests and logs the results t
 
 ## Description
 
-This script automates the process of conducting speed tests using Ookla's Speedtest CLI tool and logs the results to a CSV file. It is designed to run indefinitely, performing a speed test every hour.
+This script automates the process of conducting speed tests using Ookla's Speedtest CLI tool and logs the results to a CSV file. It is designed to run indefinitely, performing a speed test every 15 minutes.
 
 ## Prerequisites
 
 - Windows OS
-- Ookla Speedtest CLI tool (included in the repository)
+- Ookla Speedtest CLI tool (not included in the repository)
 - PowerShell
 
 ## Installation
 
 1. Clone or download this repository to your local machine.
-2. Ensure that PowerShell execution policy allows script execution.
-3. Modify the `$outputFile` variable in the script to specify the desired location and name for the log file.
-4. Run the script by executing it in PowerShell.
+2. Download the Ookla Speedtest.exe CLI tool and place in the same folder as this project
+3. Ensure that PowerShell execution policy allows script execution.
+4. Modify the `$outputFile` variable in the script to specify the desired location and name for the log file.
+5. Run the script by executing it in PowerShell.
 
 ## Usage
 
